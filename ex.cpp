@@ -38,7 +38,7 @@ void ex::receivedenu(const currency::transfer &transfer) {
   double eu = (sqrt((b*b)-(4*a*c)) - b)/(2*a);
   double ee = received - eu;
 
-  double new_shares = shares * (ee/(eu+eos_balance));
+  double new_shares = shares * (ee/(eu+enu_balance));
 
   auto quantity = asset(10000*new_shares, ENUEOS_SYMBOL);
 
@@ -83,7 +83,7 @@ void ex::receivedeos(const currency::transfer &transfer) {
   double ue = (sqrt((b*b)-(4*a*c)) - b)/(2*a);
   double uu = received - ue;
 
-  double new_shares = shares * (uu/(ue+usd_balance));
+  double new_shares = shares * (uu/(ue+eos_balance));
 
   auto quantity = asset(10000*new_shares, ENUEOS_SYMBOL);
 
