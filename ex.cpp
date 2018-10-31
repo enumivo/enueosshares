@@ -33,7 +33,7 @@ void ex::receivedenu(const currency::transfer &transfer) {
 
   double a = eos_balance;
   double b = 2 * eos_balance * enu_balance;
-  double c = - eos_balance * eos_balance * received;
+  double c = - eos_balance * enu_balance * received;
 
   double eu = (sqrt((b*b)-(4*a*c)) - b)/(2*a);
   double ee = received - eu;
@@ -78,7 +78,7 @@ void ex::receivedeos(const currency::transfer &transfer) {
 
   double a = enu_balance;
   double b = 2 * enu_balance * eos_balance;
-  double c = - enu_balance * enu_balance * received;
+  double c = - enu_balance * eos_balance * received;
 
   double ue = (sqrt((b*b)-(4*a*c)) - b)/(2*a);
   double uu = received - ue;
