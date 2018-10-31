@@ -36,7 +36,7 @@ void ex::receivedenu(const currency::transfer &transfer) {
   double c = - eos_balance * eos_balance * received;
 
   double eu = (sqrt((b*b)-(4*a*c)) - b)/(2*a);
-  double ee = recieved - eu;
+  double ee = received - eu;
 
   double new_shares = shares * (ee/(eu+eos_balance));
 
